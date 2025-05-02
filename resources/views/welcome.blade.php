@@ -17,7 +17,7 @@
             body {
                 font-family: 'Nunito', sans-serif;
             }
-            h4{
+            h3{
                 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
             };
         </style>
@@ -26,7 +26,7 @@
                 <a class="navbar-brand" href="#">
                     <img src="img/logo-berita.png"  style="width: 7rem; height: 7rem;" alt="" width="30" height="24" class="d-inline-block align-text-top">
                 </a>
-                <h4 class="mt-2">Breaking Knows</h4>
+                <h3 class="mt-2">Breaking News</h3>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -43,14 +43,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="#">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                            </svg>
-                        </a>
                     </li>
                 </ul>
                 </div>
@@ -73,36 +65,6 @@
             <div class="content">
                 <div class="container">
                     <div class="row">
-                        <div class="col-3 md-3">
-                            <div class="card" style="width: 15rem;">
-                                <img src="img/botak main bola.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Momen Ipin Selebrasi SIUUUUUUUUUU</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Detail</a>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="col-3 md-3">
-                            <div class="card" style="width: 15rem;">
-                                <img src="img/botak main bola.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Momen Ipin Selebrasi SIUUUUUUUUUU</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Detail</a>
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="col-3 md-3">
-                            <div class="card" style="width: 15rem;">
-                                <img src="img/botak main bola.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Momen Ipin Selebrasi SIUUUUUUUUUU</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">Detail</a>
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-3 md-3">
                             <div class="card" style="width: 15rem;">
                                 <img src="img/botak main bola.jpeg" class="card-img-top" alt="...">

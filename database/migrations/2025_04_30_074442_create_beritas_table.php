@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('judul');
             $table->string('isi');
             $table->string('cover');
+            $table->string('tanggal_terbit');
             $table->unsignedBigInteger('id_kategori');
             $table->unsignedBigInteger('id_penerbit');
 

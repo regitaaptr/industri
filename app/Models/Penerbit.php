@@ -11,4 +11,8 @@ class Penerbit extends Model
     protected $fillable = ['id', 'nama_penerbit'];
     public $timestamp = true;
 
+    
+    public function berita(){
+        return $this->hasMany(Berita::class);
+    }
 }
