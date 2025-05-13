@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Berita extends Model
 {
     use HasFactory;
-    protected $fillable = ['id', 'judul', 'isi', 'cover', 'tanggal_terbit', 'id_kategori', 'id_penerbit'];
+    protected $fillable = ['id', 'judul', 'isi', 'cover', 'tanggal_terbit', 'penulis'];
     public $timestamp = true;
 
     public function deleteImage(){
@@ -16,11 +16,4 @@ class Berita extends Model
             return unlink(public_path('images/berita/' . $this->cover));
         }                       
     }
-
-    public function penerbit(){
-        return $this->belongsTo(Penerbit::class, 'id_penerbit');
-    }
-    public function kategori(){
-            return $this->belongsTo(Kategori::class, 'id_kategori');
-    }
-    }
+}

@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BeritaController;
-use App\Http\Controllers\KategoriController;
-use App\Http\Controllers\PenerbitController;
+use App\Http\Controllers\FrontController;
 use App\Http\Middleware\isAdmin;
 
 
@@ -30,9 +29,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('penerbit', PenerbitController::class);
-Route::resource('berita', BeritaController::class);
-Route::resource('kategori', KategoriController::class);
+Route::resource('/', Frontcontroller::class);
 
 Route::prefix('admin')->middleware('auth', isAdmin::class)->group(function(){
+    Route::resource('berita', BeritaController::class);
 });

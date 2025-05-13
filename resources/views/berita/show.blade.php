@@ -43,40 +43,31 @@
                         <div class=" d-flex align-items-sm-center flex-sm-row flex-column">
                             <div class="flex-grow-1">
                                 <div class="card">
-                                    <div class="card-header text-center">{{ __('PENDAFTARAN PPDB SMK ASSALAAM') }}</div>
-                                    <form action="{{ route('berita.store') }}"  method="post" enctype="multipart/form-data">
+                                    <div class="card-header text-center">{{ __('PENDAFTARAN berita SMK ASSALAAM') }}</div>
+                                    <form action="{{ route('berita.update', $berita->id) }}"  method="post" enctype="multipart/form-data">
                                         @csrf
+                                        @method('PUT')
                                     <div class="card-body">
-                                    <table class="table " width="100%">
-                                    <tr>
-                                            <td>Judul</td>
+                                    <table class="table">
+                                        <tr>
+                                            <td>judul</td>
                                             <td>: </td>
-                                            <td><input type="text" class="form-control  mb-2" name="judul"></td>
+                                            <td><input type="text" class="form-control  mb-2" name="judul" value="{{ $berita->judul}}" disabled></td>
                                         </tr>
                                         <tr>
                                             <td>isi</td>
                                             <td>: </td>
-                                            <td><input type="text" class="form-control  mb-2" name="isi"></td>
-                                        </tr> 
-                                        <tr>
-                                            <td>Cover</td>
-                                            <td>: </td>
-                                            <td><input type="file" class="form-control  mb-2" name="cover"></td>
-                                        </tr> 
-                                        <tr>
-                                            <td>Tanggal terbit</td>
-                                            <td>: </td>
-                                            <td><input type="date" class="form-control  mb-2" name="tanggal_terbit"></td>
+                                            <td><input type="text" class="form-control  mb-2" name="isi" value="{{ $berita->isi}}" disabled></td>
                                         </tr>
                                         <tr>
-                                            <td>penulis</td>
+                                            <td>cover</td>
                                             <td>: </td>
-                                            <td><input type="text" class="form-control  mb-2" name="penulis"></td>
-                                        </tr>         
+                                            <td><input type="text" class="form-control  mb-2" name="cover" value="{{ $berita->cover}}" disabled></td>
+                                        </tr>
                                         <tr>
                                             <td></td>
                                             <td></td>
-                                            <td><button type="submit" class="btn btn-primary float-end" name="save">Save</button></td>
+                                            <td><a href="{{ route('berita.index') }}"class="btn btn-primary">Back</a></td>
                                         </tr>
                                     </table>
                                     </form>

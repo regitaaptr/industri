@@ -6,17 +6,7 @@
         <hr>
         <ul class="nav nav-pills flex-column mb-auto">
             <li class="nav-item">
-                    <a href="#" class="nav-link active mb-2" aria-current="page">
-                        Kategori
-                    </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link active mb-2" aria-current="page">
-                    Penulis
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link active mb-2" aria-current="page">
+                <a href="{{ route('berita.index') }}" class="nav-link active mb-2" aria-current="page">
                     Berita
                 </a>
             </li>

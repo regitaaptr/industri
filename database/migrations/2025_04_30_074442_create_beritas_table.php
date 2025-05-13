@@ -14,18 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('beritas', function (Blueprint $table) {
-            $table->Bigincrements('id');
+            $table->increments('id');
             $table->string('judul');
             $table->string('isi');
             $table->string('cover');
+            $table->string('penulis');
             $table->string('tanggal_terbit');
-            $table->unsignedBigInteger('id_kategori');
-            $table->unsignedBigInteger('id_penerbit');
-
-            // relasi
-            $table->foreign('id_kategori')->references('id')->on('kategoris')->onDelete('cascade');
-            $table->foreign('id_penerbit')->references('id')->on('penerbits')->onDelete('cascade');
-
             $table->timestamps();
         });
     }

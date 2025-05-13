@@ -21,4 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('getberita' , [BeritaController::class, 'getberita'])->name('getberita');
-Route::get('berita' , [BeritaController::class, 'store'])->name('berita');
+Route::post('postberita' , [BeritaController::class, 'store'])->name('postberita');

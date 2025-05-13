@@ -24,12 +24,14 @@
                 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
             };
         </style>
-        @include('layouts.part.navbaradmin')
     </head>
         
     <body class="antialiased">
+        @include('layouts.part.navbaradmin')
         @include('layouts.part.sidebar')
+
     </body>
+    
 </html>
 
 @endif

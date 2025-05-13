@@ -17,7 +17,7 @@ class isAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if($request->routeIs('kategori.*')&& Auth::User()->is_admin !==1){
+        if($request->routeIs('berita.*')&& Auth::User()->is_admin !==1){
             abort(403, 'Anda tidak memiliki akses');
         }
         return $next($request);

@@ -38,8 +38,7 @@ class Beritacontroller extends Controller
         $berita->judul    = $request->judul;
         $berita->isi  = $request->isi;
         $berita->tanggal_terbit  = $request->tanggal_terbit;
-        $berita->id_kategori = $request->id_kategori;
-        $berita->id_penerbit = $request->id_penerbit;
+        $berita->penulis  = $request->penulis;
 
         if ($request->hasFile('cover')) {
             $img  = $request->file('cover');
@@ -87,8 +86,7 @@ class Beritacontroller extends Controller
         $berita->judul = $request->judul;
         $berita->isi       = $request->isi;
         $berita->tanggal_terbit        = $request->tanggal_terbit;
-        $berita->id_kategori = $request->id_kategori;
-        $berita->id_penerbit = $request->id_penerbit;
+        $berita->penulis  = $request->penulis;
 
 
         if ($request->hasFile('cover')) {

@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Berita;
-use App\Models\Kategori;
-use App\Models\Penerbit;
 
 
 class Beritacontroller extends Controller
@@ -27,9 +25,8 @@ class Beritacontroller extends Controller
      */
     public function create()
     {
-        $penerbit  = Penerbit::all();
-        $kategori = kategori::all();
-        return view('berita.create', compact('penerbit', 'kategori'));
+        $berita  = Berita::all();
+        return view('berita.create', compact('berita'));
     }
 
     /**
@@ -44,8 +41,7 @@ class Beritacontroller extends Controller
         $berita->judul    = $request->judul;
         $berita->isi  = $request->isi;
         $berita->tanggal_terbit  = $request->tanggal_terbit;
-        $berita->id_kategori = $request->id_kategori;
-        $berita->id_penerbit = $request->id_penerbit;
+        $berita->penulis  = $request->penulis;
 
         if ($request->hasFile('cover')) {
             $img  = $request->file('cover');
@@ -67,7 +63,8 @@ class Beritacontroller extends Controller
      */
     public function show($id)
     {
-        //
+        $berita = Berita::findOrFail($id);
+        return view('berita.show', compact('berita'));
     }
 
     /**
@@ -79,9 +76,7 @@ class Beritacontroller extends Controller
     public function edit($id)
     {
         $berita    = Berita::findOrFail($id);
-        $penerbit  = Penerbit::all();
-        $kategori = kategori::all();
-        return view('berita.edit', compact('berita', 'penerbit', 'kategori'));
+        return view('berita.edit', compact('berita'));
     }
 
     /**
@@ -97,9 +92,7 @@ class Beritacontroller extends Controller
         $berita->judul = $request->judul;
         $berita->isi       = $request->isi;
         $berita->tanggal_terbit        = $request->tanggal_terbit;
-        $berita->id_kategori = $request->id_kategori;
-        $berita->id_penerbit = $request->id_penerbit;
-
+        $berita->penulis  = $request->penulis;
 
         if ($request->hasFile('cover')) {
             $berita->deleteImage();
@@ -122,6 +115,8 @@ class Beritacontroller extends Controller
      */
     public function destroy($id)
     {
-        //
+        $berita = Berita::findOrFail($id);
+        $berita->delete();
+        return redirect()->route('berita.index')->with('success', 'Data Berhasil Dihapus');
     }
 }
